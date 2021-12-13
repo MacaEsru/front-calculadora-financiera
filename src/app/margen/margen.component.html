@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title" style="text-align: center;">Conocer mi margen</h5>
+      <form (ngSubmit)="calcularMargen()" [formGroup]="formularioMargen">
+        <div class="mb-3">
+          <label class="form-label">Costo del producto: </label>
+          <input type="price" class="form-control" formControlName="costo" id="costoProducto">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Precio de venta: </label>
+          <input type="price" class="form-control" formControlName="precioVenta" id="precioVenta">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Utilidad: </label>
+            <input [readonly]=true type="price" class="form-control" formControlName="utilidad" id="utilidad">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Margen: </label>
+            <input [readonly]=true type="number" class="form-control" formControlName="margen" id="margen">
+        </div>
+        <div class="mb-3" style="text-align: center;">
+          <button type="submit" class="btn btn-success">Calcular</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title" style="text-align: center;">Conocer el costo ideal</h5>
+      <form (ngSubmit)="calcularIdeal()" [formGroup]="formularioIdeal">
+        <div class="mb-3">
+          <label class="form-label">Margen que se quiere ganar: </label>
+          <input type="number" class="form-control" formControlName="margen" id="margen">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Precio de venta deseado: </label>
+          <input type="price" class="form-control" formControlName="precioVenta" id="precioVenta">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Costo ideal:</label>
+            <input [readonly]=true type="price" class="form-control" formControlName="costoIdeal" id="costoIdeal">
+        </div>
+        <div class="mb-3" style="text-align: center;">
+          <button type="submit" class="btn btn-danger" >Calcular</button>
+        </div>
+      </form>
+    </div>
+</div>
+</div>

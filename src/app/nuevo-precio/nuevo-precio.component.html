@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title" style="text-align: center;">Calcular nuevo precio</h5>
+      <form (ngSubmit)="calcular()" [formGroup]="formularioPrecio">
+        <div class="mb-3">
+          <label class="form-label">Costo del producto: </label>
+          <input type="number" class="form-control" formControlName="costo" id="costoProducto">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Margen que se quiere ganar: </label>
+          <input type="number" class="form-control" formControlName="margen" id="margen">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Nuevo Precio: </label>
+            <input [readonly]=true type="number" class="form-control" formControlName="nuevoCosto" id="nuevoCosto">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">IVA:</label>
+            <input type="number" class="form-control" formControlName="iva" id="iva">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Precio con IVA: </label>
+            <input [readonly]=true type="number" class="form-control" formControlName="costoIva" id="precioIva">
+        </div>
+        <div class="mb-3" style="text-align: center;">
+          <button type="submit" class="btn btn-primary">Calcular</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
